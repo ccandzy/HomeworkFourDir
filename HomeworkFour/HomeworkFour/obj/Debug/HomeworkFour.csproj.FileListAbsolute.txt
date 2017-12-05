@@ -1,0 +1,7 @@
+G:\VIP10课程作业\第四次作业\HomeworkFour\HomeworkFour\bin\Debug\HomeworkFour.exe.config
+G:\VIP10课程作业\第四次作业\HomeworkFour\HomeworkFour\bin\Debug\HomeworkFour.exe
+G:\VIP10课程作业\第四次作业\HomeworkFour\HomeworkFour\bin\Debug\HomeworkFour.pdb
+G:\VIP10课程作业\第四次作业\HomeworkFour\HomeworkFour\obj\Debug\HomeworkFour.csprojResolveAssemblyReference.cache
+G:\VIP10课程作业\第四次作业\HomeworkFour\HomeworkFour\obj\Debug\HomeworkFour.csproj.CoreCompileInputs.cache
+G:\VIP10课程作业\第四次作业\HomeworkFour\HomeworkFour\obj\Debug\HomeworkFour.exe
+G:\VIP10课程作业\第四次作业\HomeworkFour\HomeworkFour\obj\Debug\HomeworkFour.pdb
