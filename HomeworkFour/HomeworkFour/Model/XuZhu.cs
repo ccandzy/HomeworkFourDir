@@ -9,32 +9,24 @@ namespace HomeworkFour.Model
 {
     public class XuZhu
     {
-        public void XiaoHeShang()
+        public string XiaoHeShang()
         {
-            Random random = new Random();
-            Thread.Sleep(random.Next(1, 5)*1000);
-            Console.WriteLine("小和尚 " + Thread.CurrentThread.ManagedThreadId);
+            return"小和尚 " + Thread.CurrentThread.ManagedThreadId;
         }
 
-        public void XiaoYaoZhangMen()
+        public string XiaoYaoZhangMen()
         {
-            Random random = new Random();
-            Thread.Sleep(random.Next(1, 5) * 1000);
-            Console.WriteLine("逍遥掌门 " + Thread.CurrentThread.ManagedThreadId);
+            return"逍遥掌门 " + Thread.CurrentThread.ManagedThreadId;
         }
 
-        public void LingJiuGongZhu()
+        public string LingJiuGongZhu()
         {
-            Random random = new Random();
-            Thread.Sleep(random.Next(1, 5) * 1000);
-            Console.WriteLine("灵鹫宫宫主 " + Thread.CurrentThread.ManagedThreadId);
+            return"灵鹫宫宫主 " + Thread.CurrentThread.ManagedThreadId;
         }
 
-        public void XiXiaFuMa()
+        public string XiXiaFuMa()
         {
-            Random random = new Random();
-            Thread.Sleep(random.Next(1, 5) * 1000);
-            Console.WriteLine("西夏驸马 " + Thread.CurrentThread.ManagedThreadId);
+            return"西夏驸马 " + Thread.CurrentThread.ManagedThreadId;
         }
     }
 }

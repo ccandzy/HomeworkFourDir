@@ -9,32 +9,24 @@ namespace HomeworkFour.Model
 {
     public class DuanYu
     {
-        public void ZhongLingEr()
+        public string ZhongLingEr()
         {
-            Random random = new Random();
-            Thread.Sleep(random.Next(1, 5) * 1000);
-            Console.WriteLine("钟灵儿 "+ Thread.CurrentThread.ManagedThreadId);
+            return "钟灵儿 "+ Thread.CurrentThread.ManagedThreadId;
         }
 
-        public void MuWanQing()
+        public string MuWanQing()
         {
-            Random random = new Random();
-            Thread.Sleep(random.Next(1, 5) * 1000);
-            Console.WriteLine("木婉清 " + Thread.CurrentThread.ManagedThreadId);
+            return "木婉清 " + Thread.CurrentThread.ManagedThreadId;
         }
 
-        public void WangYuYan()
+        public string WangYuYan()
         {
-            Random random = new Random();
-            Thread.Sleep(random.Next(1, 5) * 1000);
-            Console.WriteLine("王语嫣 " + Thread.CurrentThread.ManagedThreadId);
+            return "王语嫣 " + Thread.CurrentThread.ManagedThreadId;
         }
 
-        public void  DaLiGuoWang()
+        public string  DaLiGuoWang()
         {
-            Random random = new Random();
-            Thread.Sleep(random.Next(1, 5) * 1000);
-            Console.WriteLine("大理国王 " + Thread.CurrentThread.ManagedThreadId);
+            return "大理国王 " + Thread.CurrentThread.ManagedThreadId;
         }
     }
 }
