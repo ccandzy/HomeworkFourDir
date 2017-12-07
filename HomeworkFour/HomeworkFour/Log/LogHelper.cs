@@ -10,18 +10,22 @@ namespace HomeworkFour.Log
     
     public static class LogHelper
     {
-        public static string LogPath = AppDomain.CurrentDomain.BaseDirectory + "Log";
+        private static readonly object _lockObject = new object(); 
+        public static string LogPath = AppDomain.CurrentDomain.BaseDirectory + "Log.txt";
         
-        public static void WriteTxtLog()
+        public static void WriteTxtLog(string content)
         {
-            if (File.Exists(LogPath))
+            lock (_lockObject)
             {
-
+                Console.WriteLine(content);
+                File.AppendAllText(LogPath, content+"\r\n");
             }
-            else
-            {
+        }
 
-            }
+        public static void WriteTxtLogWithOutLock(string content)
+        {
+            Console.WriteLine(content);
+            File.AppendAllText(LogPath, content + "\r\n");
         }
     }
 }

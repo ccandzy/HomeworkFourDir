@@ -12,3 +12,10 @@ G:\VIP10课程作业\HomeworkFourDir\HomeworkFour\HomeworkFour\obj\Debug\Homewor
 G:\VIP10课程作业\HomeworkFourDir\HomeworkFour\HomeworkFour\obj\Debug\HomeworkFour.csproj.CoreCompileInputs.cache
 G:\VIP10课程作业\HomeworkFourDir\HomeworkFour\HomeworkFour\obj\Debug\HomeworkFour.exe
 G:\VIP10课程作业\HomeworkFourDir\HomeworkFour\HomeworkFour\obj\Debug\HomeworkFour.pdb
+F:\CC\HomeworkFourDir\HomeworkFour\HomeworkFour\bin\Debug\HomeworkFour.exe.config
+F:\CC\HomeworkFourDir\HomeworkFour\HomeworkFour\bin\Debug\HomeworkFour.exe
+F:\CC\HomeworkFourDir\HomeworkFour\HomeworkFour\bin\Debug\HomeworkFour.pdb
+F:\CC\HomeworkFourDir\HomeworkFour\HomeworkFour\obj\Debug\HomeworkFour.csprojResolveAssemblyReference.cache
+F:\CC\HomeworkFourDir\HomeworkFour\HomeworkFour\obj\Debug\HomeworkFour.csproj.CoreCompileInputs.cache
+F:\CC\HomeworkFourDir\HomeworkFour\HomeworkFour\obj\Debug\HomeworkFour.exe
+F:\CC\HomeworkFourDir\HomeworkFour\HomeworkFour\obj\Debug\HomeworkFour.pdb

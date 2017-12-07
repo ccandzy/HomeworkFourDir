@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\ConfigHelper.cs" />
     <Compile Include="Log\LogHelper.cs" />
     <Compile Include="Model\DuanYu.cs" />
     <Compile Include="Model\QiaoFeng.cs" />
