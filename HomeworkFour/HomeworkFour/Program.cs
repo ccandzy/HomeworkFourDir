@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using HomeworkFour.Config;
 using HomeworkFour.Log;
+using HomeworkFour.Common;
 
 namespace HomeworkFour
 {
@@ -87,18 +88,18 @@ namespace HomeworkFour
             ConfigHelper.CreateData();
             Dictionary<string,List<string>> dictionary = ConfigHelper.GetDictionary();
             CancellationTokenSource cts = new CancellationTokenSource();
-            Stopwatch stopwatchUpgradeOne = new Stopwatch();
 
+            Stopwatch stopwatchUpgradeOne = new Stopwatch();
             stopwatchUpgradeOne.Start();
 
             Task listenTask = new Task(() =>
             {
                 while (!cts.IsCancellationRequested)
                 {
-                    Thread.Sleep(1000);
-                    int randomInt = new Random().Next(2015, 2020);
+                    Thread.Sleep(800);
+                    int randomInt = new Random().Next(0, 2020);
                     //Console.WriteLine(randomInt);
-                    if (randomInt == 2012)
+                    if (randomInt == 2017)
                     {
                         cts.Cancel();
                         Console.WriteLine("世界末日！！！");
@@ -108,11 +109,21 @@ namespace HomeworkFour
             listenTask.Start();
 
 
+            Task write = new Task(() =>
+            {
+                while(!cts.IsCancellationRequested)
+                {
+                    Thread.Sleep(500);
+                    LogHelper.CustomConsoleWirte();
+                }
+            });
+            write.Start();
+
             Action<string> storyNodeUpgradeOne = (node) =>
             {
                 try
                 {
-                    var randomInt = new Random().Next(1, 5000);
+                    var randomInt = new RandomHelper().GetNumber(1, 5000);
                     Thread.Sleep(randomInt);
                     if (cts.IsCancellationRequested) return;
                     if (!_isStart)
@@ -141,25 +152,14 @@ namespace HomeworkFour
                 
             };
             var taskFactoryUpgradeOne = new TaskFactory();
-
-            //List<Task<string>> taskListUpgradeOne = new List<Task<string>>();
-            //foreach (var dic in dictionary)
-            //{
-            //    Thread.Sleep(new Random().Next(0, 100));
-            //    var task = taskFactoryUpgradeOne.StartNew(() =>
-            //    {
-            //        dic.Value.ForEach(storyNodeUpgradeOne);
-            //        return dic.Key;
-            //    });
-            //    taskListUpgradeOne.Add(task);
-            //}
-
+            
             var taskListUpgradeOne = dictionary.Select(dic => taskFactoryUpgradeOne.StartNew(() =>
                 {
                     dic.Value.ForEach(storyNodeUpgradeOne);
                     return dic.Key;
                 })).ToList();
             var endTask = new Task(() => LogHelper.WriteTxtLog("中原群雄大战辽兵,忠义两难一死谢天"), cts.Token);
+
             try
             {
                 Task.Factory.ContinueWhenAny(taskListUpgradeOne.ToArray(), t =>LogHelper.WriteTxtLog(t.Result.ToString() + "已经做好准备啦"),cts.Token);

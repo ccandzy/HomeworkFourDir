@@ -42,8 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\RandomHelper.cs" />
     <Compile Include="Config\ConfigHelper.cs" />
     <Compile Include="Log\LogHelper.cs" />
+    <Compile Include="Log\OperateEnum.cs" />
     <Compile Include="Model\DuanYu.cs" />
     <Compile Include="Model\QiaoFeng.cs" />
     <Compile Include="Model\XuZhu.cs" />
